@@ -1,0 +1,25 @@
+---
+title: '1.1'
+output: html_document
+date: "2023-12-18"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Interactive map of survey entries
+Create an interactive leaflet map divided by states that are colored in relation to a total number of survey responses across all waves, following good practice of visualization. For this plot, you should:
+- employ a color palette based on the number range of survey entries.
+- use the OpenStreetMap.Mapnik provider tile.
+- create a popup that reads “Total survey responses for {State initials}: {Number}”.
+- add a color legend with a title.
+
+```{r}
+meof_usa_survey_df = readRDS('survey/meof_usa_survey_df.RDS')
+meof_usa_web_df = readRDS('tracking/meof_usa_web_df.RDS')
+time_zones = readRDS('tracking/time_zones.RDS')
+
+# meof_usa_survey_wave3 = filter(meof_usa_survey_df, wave == 3)
+```
+
